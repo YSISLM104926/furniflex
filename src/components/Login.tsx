@@ -4,10 +4,11 @@ import { IoLogoApple } from "react-icons/io";
 import { FcGoogle } from "react-icons/fc";
 import bannerImg from '../assets/images/heroimage.png'
 import iconImg from '../assets/icons/icon.png'
+import { Link } from 'react-router-dom';
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     return (
-        <div><div className='flex gap-6'>
+        <div><div className='flex'>
             <div className="flex items-center justify-center min-h-screen w-full bg-gray-100">
                 <div className="w-full max-w-md bg-white rounded-lg shadow-md p-8">
                     <div className="text-center mb-8">
@@ -15,35 +16,9 @@ const Login = () => {
                         <h1 className="text-3xl font-bold">
                             Furni<span className="text-blue-500">Flex</span>
                         </h1>
-                        <p className="text-sm text-gray-500 mt-2">Signup for purchase your desire products</p>
+
                     </div>
                     <form className="space-y-6">
-                        <div className="grid grid-cols-2 gap-4">
-                            <div>
-                                <label htmlFor="firstName" className="block text-sm text-start font-medium text-gray-700 mb-1">
-                                    First name
-                                </label>
-                                <input
-                                    id="firstName"
-                                    name="firstName"
-                                    type="text"
-                                    placeholder="Jordan"
-                                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-                                />
-                            </div>
-                            <div>
-                                <label htmlFor="lastName" className="block text-sm text-start font-medium text-gray-700 mb-1">
-                                    Last name
-                                </label>
-                                <input
-                                    id="lastName"
-                                    name="lastName"
-                                    type="text"
-                                    placeholder="Ken"
-                                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-                                />
-                            </div>
-                        </div>
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium text-start text-gray-700 mb-1">
                                 Email address
@@ -107,7 +82,7 @@ const Login = () => {
                             type="submit"
                             className="w-full bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                         >
-                            Signup
+                            Login
                         </button>
                     </form>
                     <div className="mt-6">
@@ -141,9 +116,9 @@ const Login = () => {
                         </div>
                     </div>
                     <p className="mt-8 text-center text-sm text-gray-600">
-                        Have an account?{" "}
-                        <a href="#" className="font-medium text-blue-600 hover:underline">
-                            Sign In
+                        Dont have an account?{" "}
+                        <a className="font-medium text-blue-600 hover:underline">
+                            <Link to='/signup'>Signup</Link>
                         </a>
                     </p>
                 </div>
