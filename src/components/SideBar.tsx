@@ -69,6 +69,7 @@ interface SidebarProps extends BoxProps {
 const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
     return (
         <Box
+            style={{ fontFamily: 'barlow' }}
             bg={useColorModeValue('white', 'gray.900')}
             borderRight="1px"
             borderRightColor={useColorModeValue('gray.200', 'gray.700')}
@@ -95,7 +96,6 @@ const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
     return (
         <Box
             as="a"
-            href="#"
             style={{ textDecoration: 'none' }}
             _focus={{ boxShadow: 'none' }}>
             <Flex
@@ -110,16 +110,7 @@ const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
                     color: 'white',
                 }}
                 {...rest}>
-                {icon && (
-                    <Icon
-                        mr="4"
-                        fontSize="16"
-                        _groupHover={{
-                            color: 'white',
-                        }}
-                        as={icon}
-                    />
-                )}
+
                 {children}
             </Flex>
         </Box>

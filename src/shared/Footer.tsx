@@ -55,13 +55,13 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 
 export const Footer = () => {
     return (
-        <Box
+        <Box style={{ fontFamily: 'barlow' }}
             className='bg-black'
             color={useColorModeValue('gray.700', 'gray.200')}>
             <Container as={Stack} maxW={'6xl'} py={10}>
                 <SimpleGrid
                     templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 2fr' }}
-                    spacing={8}>
+                    spacing={8} style={{ fontFamily: 'barlow' }}>
                     <Stack spacing={6}>
                         <Box className='flex'>
                             <img className='size-9' src={iconImg} alt="" />

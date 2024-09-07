@@ -1,7 +1,7 @@
 
 const Card = () => {
     return (
-        <div className="w-[277px] h-[445px] mx-auto bg-[#fdfbfb] p-4 rounded-xl shadow-lg">
+        <div className="w-[277px] h-[445px] mx-auto bg-[#fdfbfb] p-4 rounded-xl shadow-lg" style={{ fontFamily: 'barlow' }}>
             <div className="w-[245px] h-[236px] mx-auto">
                 <img className='bg-[#F2F2F2] w-[245px] h-[236px]' style={{ borderRadius: '8px' }} src="https://i.ibb.co/0JD2W3c/c6.png" alt="" />
             </div>

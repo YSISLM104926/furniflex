@@ -61,11 +61,11 @@ export const Navbar = () => {
                     <HStack spacing={8} alignItems={'center'}>
                         <Box className='flex'>
                             <img className='size-9' src={iconImg} alt="" />
-                            <h1 className="text-2xl font-bold">
+                            <h1 className="text-2xl font-bold" style={{ fontFamily: 'barlow' }}>
                                 Furni<span className="text-blue-500">Flex</span>
                             </h1>
                         </Box>
-                        <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
+                        <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }} style={{ fontFamily: 'barlow' }}>
                             <NavLink>Home</NavLink>
                             <NavLink>Products</NavLink>
                             <NavLink>Categories</NavLink>
@@ -74,29 +74,31 @@ export const Navbar = () => {
                         </HStack>
                     </HStack>
                     <Flex alignItems={'center'}>
-                        <div className="mr-9 hover:cursor-pointer">
-                            <div className="relative py-2">
-                                <div className="absolute t-0 left-3">
-                                    <p className="flex h-2 w-2 items-center justify-center rounded-full bg-red-500 p-3 text-xs text-white">
-                                        3
-                                    </p>
+                        <Link to='/cart'>
+                            <div className="mr-9 hover:cursor-pointer">
+                                <div className="relative py-2">
+                                    <div className="absolute t-0 left-3">
+                                        <p className="flex h-2 w-2 items-center justify-center rounded-full bg-red-500 p-3 text-xs text-white">
+                                            3
+                                        </p>
+                                    </div>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        strokeWidth="1.5"
+                                        stroke="currentColor"
+                                        className="mt-4 h-6 w-6"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+                                        />
+                                    </svg>
                                 </div>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth="1.5"
-                                    stroke="currentColor"
-                                    className="mt-4 h-6 w-6"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
-                                    />
-                                </svg>
                             </div>
-                        </div>
+                        </Link>
                         <Menu>
                             <MenuButton
                                 as={Button}
@@ -111,7 +113,7 @@ export const Navbar = () => {
                                     }
                                 />
                             </MenuButton>
-                            <MenuList>
+                            <MenuList style={{ fontFamily: 'barlow' }}>
                                 <MenuItem><Link to='/profile'><div className='flex items-center gap-2'><FiUser /><h1>Profile</h1></div></Link></MenuItem>
                                 <MenuDivider />
                                 <MenuItem><Link to='/login'><div className='flex items-center gap-2'><CiLogout /><h1>Logout</h1></div></Link></MenuItem>
@@ -121,7 +123,7 @@ export const Navbar = () => {
                 </Flex>
                 {isOpen ? (
                     <Box pb={4} display={{ md: 'none' }}>
-                        <Stack as={'nav'} spacing={4}>
+                        <Stack as={'nav'} spacing={4} style={{ fontFamily: 'barlow' }}>
                             <NavLink>Home</NavLink>
                             <NavLink>Products</NavLink>
                             <NavLink>Categories</NavLink>
