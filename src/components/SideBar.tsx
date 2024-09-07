@@ -5,7 +5,6 @@ import {
     Box,
     CloseButton,
     Flex,
-    Icon,
     useColorModeValue,
     Text,
     Drawer,

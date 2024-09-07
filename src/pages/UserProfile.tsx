@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import {
     Box,
     Flex,
@@ -18,7 +18,6 @@ import {
     Input,
     Button,
     VStack,
-    HStack,
 } from '@chakra-ui/react'
 import { FaBox, FaUser, FaCreditCard, FaCog } from 'react-icons/fa'
 import { Navbar } from '../shared/Navbar'
